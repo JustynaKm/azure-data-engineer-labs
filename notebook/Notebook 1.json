@@ -1,0 +1,66 @@
+{
+	"name": "Notebook 1",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "sparkin2459j",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "4f034c6d-9507-469f-a71c-468221848a9a"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/9956b528-acee-410a-96e5-68cf72de6109/resourceGroups/dp203-in2459j/providers/Microsoft.Synapse/workspaces/synapsein2459j/bigDataPools/sparkin2459j",
+				"name": "sparkin2459j",
+				"type": "Spark",
+				"endpoint": "https://synapsein2459j.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkin2459j",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.1",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"microsoft": {
+						"language": "sparksql"
+					}
+				},
+				"source": [
+					" %%sql\r\n",
+					" INSERT INTO `RetailDB`.`SalesOrder` VALUES (99999, CAST('2022-01-01' AS TimeStamp), 1, 6, 5, 1)"
+				],
+				"execution_count": 1
+			}
+		]
+	}
+}
